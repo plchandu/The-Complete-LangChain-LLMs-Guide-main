@@ -13,17 +13,6 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 
 llm_model = "gpt-3.5-turbo"
 
-
-# OpenAI Completion Endpoint
-def get_completion(prompt, model=llm_model):
-    messages = [{"role": "user", "content": prompt}]
-    response = openai.ChatCompletion.create(
-        model=model,
-        messages=messages,
-        temperature=0, 
-    )
-    return response.choices[0].message["content"]
-
 # Translate text, review 
 customer_review = """
  Your product is terrible!  I don't know how 
@@ -32,19 +21,15 @@ customer_review = """
  Seriously!  Give me money now!
  
 """
-tone = """ Proper British English in a nice, warm, respectful tone """
-language = "Turkish"
+# tone = """ Proper British English in a nice, warm, respectful tone """
+# language = "Turkish"
 
-promp = f""" 
-  Rewrite the following {customer_review} in {tone}, and then
-  please translate the new review message into {language}.
-"""
+# promp = f""" 
+#   Rewrite the following {customer_review} in {tone}, and then
+#   please translate the new review message into {language}.
+# """
 
-rewrite = get_completion(prompt=promp)
-
-# print(rewrite)
-
-# ====== Using LangChain & prompt templates - Still ChatAPI ====
+#====== Using LangChain & prompt templates - Still ChatAPI ====
 chat_model = ChatOpenAI(temperature=0.7, 
                         model=llm_model)
 

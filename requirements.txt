@@ -1,0 +1,7 @@
+openai
+langsmith==0.4.8
+langchain-core==0.3.68
+langchain==0.3.26
+langchain-community==0.3.27
+langchain-openai
+dotenvsource 

@@ -123,7 +123,7 @@ response = chat(messages)
 print(type(response.content))
 
 output_dict = output_parser.parse(response.content) # parse into dict
-print(type(output_dict))
+print(output_dict)
 print(f"Cities:::: {output_dict['cities_to_visit'][0]}")
 
 

@@ -1,7 +1,18 @@
-openai
-langsmith==0.4.8
-langchain-core==0.3.68
+# openai
+# langsmith==0.4.8
+# langchain-core==0.3.68
+# langchain==0.3.26
+# langchain-community==0.3.27
+# langchain-openai
+# dotenv
 langchain==0.3.26
+langchain-core==0.3.68
 langchain-community==0.3.27
 langchain-openai
-dotenvsource 
+pydantic==2.7.4
+pydantic-settings==2.4.0
+python-dotenv
+faiss-cpu
+openai
+
+

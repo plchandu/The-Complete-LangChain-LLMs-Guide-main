@@ -65,3 +65,44 @@ print("\n=== Output ===")
 print(f"Summary: {result['summary']}")
 print(f"Claim Type: {result['claim_type']}")
 print(f"Response:\n{result['final_response']}")
+
+""
+                ┌────────────────────┐
+                │  Start (Input Email)│
+                └────────┬───────────┘
+                         │
+                         ▼
+         ┌────────────────────────────────┐
+         │  Step 1: Summarize the Email   │
+         │ Prompt:                        │
+         │ "Summarize the following       │
+         │  email in 1–2 sentences."      │
+         └────────┬───────────────────────┘
+                  │
+                  ▼
+      ┌─────────────────────────────┐
+      │  Step 2: Detect Claim Type  │
+      │ Prompt:                     │
+      │ "What type of claim is this│
+      │  based on the summary?"     │
+      └────────┬────────────────────┘
+               │
+               ▼
+   ┌────────────────────────────────────┐
+   │ Step 3: Generate Final Response    │
+   │ Prompt:                            │
+   │ "You are an insurance agent.      │
+   │  Write a professional response    │
+   │  based on the summary and claim." │
+   └────────┬──────────────────────────┘
+            │
+            ▼
+     ┌────────────────────────┐
+     │  Output Final Response │
+     └────────┬───────────────┘
+              ▼
+         ┌────────────┐
+         │   End      │
+         └────────────┘
+
+""
